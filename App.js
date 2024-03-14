@@ -72,5 +72,3 @@ const styles = StyleSheet.create({
     fontSize: 40,
   },
 });
-
-//transform: "rotate(180deg)",
