@@ -21,7 +21,9 @@ export default function App() {
       <Text style={styles.text}>{mais}</Text>
       <View style={styles.button}>
         <Button onPress={incrementCounter} title="+" />
-        <Button onPress={decrementCounter} title="-" />
+      </View>
+      <View style={styles.button2}>
+      <Button onPress={decrementCounter} title="-" />
       </View>
       <View style={styles.zero}>
         <Button onPress={zerarCounter} title="Zerar" />
@@ -43,13 +45,26 @@ const styles = StyleSheet.create({
     fontSize: 60,
   },
   button: {
-    marginTop: 50,
-    alignItems: "center",
-    justifyContent: "space-between",
-    flexDirection: "row-reverse",
-    width: 250,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    overflow: "hidden",
+    float: "left",
+    margin: 15,
   },
+
+  button2: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    overflow: "hidden",
+    float: "rigth",
+    margin: 15,
+  },
+
   zero: {
-    fontSize: 40,
-  },
+    marginTop: 250,
+    fontSize: 40,
+  },
 });
+
