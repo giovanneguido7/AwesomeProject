@@ -16,17 +16,23 @@ export default function App() {
     setMais(0);
   };
 
+  const adicionar = () => {
+    setMais(mais + 10);
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{mais}</Text>
       <View style={styles.button}>
         <Button onPress={incrementCounter} title="+" />
-      </View>
-      <View style={styles.button2}>
-      <Button onPress={decrementCounter} title="-" />
+        <View style={styles.button2}></View>
+        <Button onPress={decrementCounter} title="-" />
       </View>
       <View style={styles.zero}>
         <Button onPress={zerarCounter} title="Zerar" />
+      </View>
+      <View style={styles.add}>
+        <Button onPress={adicionar} title="Add 10" />
       </View>
       <StatusBar style="auto" />
     </View>
@@ -44,27 +50,27 @@ const styles = StyleSheet.create({
     color: "#000",
     fontSize: 60,
   },
-  button: {
+  button:
+   {
     width: 100,
     height: 100,
-    borderRadius: 50,
+    borderRadius: 100,
     overflow: "hidden",
-    float: "left",
-    margin: 15,
+    flexDirection: 'column',
   },
 
   button2: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    overflow: "hidden",
-    float: "rigth",
     margin: 15,
   },
 
+  add: {
+    padding: 10,
+  },
+  
   zero: {
     marginTop: 250,
     fontSize: 40,
   },
 });
 
+//transform: "rotate(180deg)",
